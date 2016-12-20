@@ -1,1 +1,3 @@
+#+ endpoint: http://dbpedia.org/sparql/sparql
+
 select distinct ?Concept where {[] a ?Concept} LIMIT 100
