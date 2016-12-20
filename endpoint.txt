@@ -1,1 +1,1 @@
-http://ecaickathon-api.tech:3030/default/sparql
+http://dbpedia.org/sparql/sparql

@@ -1,16 +1,1 @@
-
-PREFIX tablink: <http://lod.cedar-project.nl/vocab/cedar-tablink#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT ?cell ?literal ?header_type ?dataset_name
-FROM <urn:graph:cedar-mini:raw-data> 
-WHERE {
-	?cell a ?header_type.
-	?cell tablink:value ?literal.
-	?cell tablink:sheet __DATA_SET__. 
-	?dataset dcterms:hasPart __DATA_SET__.
-	?dataset rdfs:label ?dataset_name.
-	FILTER (?header_type IN (tablink:RowHeader,tablink:ColumnHeader))
-	FILTER (?literal != "")
-} 
+select distinct ?Concept where {[] a ?Concept} LIMIT 100
